@@ -2,8 +2,9 @@ body{
     margin: 0;
 }
 
+
 .container{
-    height: 100vh;
+    min-height: 100vh;
     display: grid;
     grid-template-columns: repeat(6, 1fr);
     grid-template-rows: 10vh 40vh 1fr;
@@ -15,16 +16,71 @@ body{
 
 .navbar{
     grid-area: navbar;
+    background-color: dodgerblue;
+    position: sticky;
+    top: 0;
+    display:flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.navbar a{
+    color: white;
+    padding: 1.5em;
+    text-decoration: none;
+}
+
+.navbar a:hover{
+    background-color: antiquewhite;
 }
 
 .prof-info{
     grid-area: prof-info;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    padding: 0 5vw;
+}
+
+.prof-info > h1{
+    align-self: center;
 }
 
 .prof-pic{
     grid-area: prof-pic;
+    display: flex;
+    align-items: center;
+}
+
+#profPic{
+    width:100%;
+    height: 100%;
+    max-height: 100%;
+    object-fit:cover;
 }
 
 .posts{
     grid-area: posts;
+}
+
+.post-card{
+    border: 1px solid black;
+    padding: 1em;
+    margin: 2vh 0;
+}
+
+.card-links{
+    display: flex;
+    justify-content: space-around;
+}
+
+.card-links > a{
+    text-decoration: none;
+    color: blue;
+}
+
+.card-links > a:hover{
+    text-decoration: underline;
+    background-color: dodgerblue;
+    color: white;
 }
